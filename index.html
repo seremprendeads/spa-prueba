@@ -540,7 +540,7 @@
         .testimonial {
             background: white;
             padding: 2.5rem;
-            border-radius: 100%;
+            border-radius: 25px;
             box-shadow: 0 15px 35px rgba(232, 180, 214, 0.1);
             position: relative;
             border-left: 4px solid var(--primary-pink);
@@ -837,13 +837,20 @@
                 display: none;
             }
 
-         
     .cta-button-movil {
-        display: block;           
-        margin: 2rem auto 0;      
-        text-align: center;       
+        display: block;       /* hace que ocupe todo el ancho */
+        margin: 2rem auto 0;  /* auto en los costados lo centra */
+        text-align: center;   /* si el botón fuera inline-block */
+        max-width: fit-content; /* evita que se estire */
     }
-}
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center; /* centra horizontal */
+        width: 100%;
+    }
+
+
 
             .socios-slide img {
                 width: 60px;
@@ -1665,5 +1672,3 @@
     </script>
 </body>
 </html>
-
-
