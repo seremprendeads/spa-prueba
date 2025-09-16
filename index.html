@@ -57,25 +57,24 @@
             align-items: center;
             gap: 0.5rem;
             text-decoration: none;
-			height: 56px;
-            width: auto;
+			    height: auto;
+    width: 86px;
             transition: transform 0.3s ease;
 			border-radius: 100%;
+					
         }
 
-   
-      .logo-inner {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--primary-pink);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+.logo-calltoaction {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    height: 86px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border-radius: 100%;
+    justify-content: space-evenly;
+}
 
         .logo-text {
             font-size: 1.8rem;
@@ -163,9 +162,9 @@
         }
 		
   .hero-fondo {
-            background-image: url('img/spa-hero.jpg');
+            background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1757985244/spa-hero2_pkr7xk.webp');
             background-size: cover;
-            background-position: center top;
+            background-position: center center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             padding: 100px 0 100px;
@@ -246,7 +245,27 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(232, 180, 214, 0.4);
         }
+			  .cta-button-movil {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-logo);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgb(180 51 132 / 34%);
+        }
 
+        .cta-button-movil:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232, 180, 214, 0.4);
+        }
+
+		
+	.cta-button-movil {
+	  display:none;
+	}
         .hero-image {
             position: relative;
 			animation: fadeInUp 1s ease 0.5s both;
@@ -312,7 +331,7 @@
 .socios-slider {
   overflow: hidden;
   background: #feabde;
-  padding: 10px 0;
+
 }
 
 .socios-track {
@@ -372,7 +391,13 @@
   }
   .hero-image { padding: 0px;}
   
+.cta-button {
+ display:none;
+}
 
+.cta-button-movil{
+			 display: block;
+			}
 
 }
 
@@ -422,9 +447,7 @@
 
         .about-image {
             position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(232, 180, 214, 0.2);
+            margin-left: 80px;
         }
 
         .about-image-placeholder {
@@ -504,7 +527,7 @@
 
         /* Gallery */
         .gallery {
-              background-image: url('img/spa-hero.jpg');
+              background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1757985253/spa-hero_hyc6r9.jpg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -535,6 +558,7 @@
     display: block;    /* elimina espacios fantasmas */
     object-fit: contain; /* hace que la imagen siempre se vea completa */
     border-radius: 20px;
+	   border: solid 6px white;
 }
 
 
@@ -578,6 +602,7 @@
             box-shadow: 0 15px 35px rgba(232, 180, 214, 0.1);
             position: relative;
             border-left: 4px solid var(--primary-pink);
+			border-radius: 100%;
         }
 
         .testimonial::before {
@@ -589,6 +614,10 @@
             color: var(--primary-pink);
             opacity: 0.3;
         }
+		
+		.testimonial img {
+		 border-radius:100%;
+		}
 
         .testimonial-text {
             font-style: italic;
@@ -621,7 +650,7 @@
 .faq-container {
     max-width: 1200px;
     margin: 0 auto;
-    background-image: url(img/spa-hero.jpg);
+    background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1757985253/spa-hero_hyc6r9.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -690,7 +719,7 @@
 
         /* CTA Section */
         .cta-section {
-            background-image: url('img/faq.png');
+            background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1757985253/spa-hero_hyc6r9.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -701,15 +730,7 @@
             overflow: hidden;
         }
 
-       /* .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle cx="100" cy="100" r="50" fill="white" opacity="0.05"/><circle cx="1100" cy="300" r="80" fill="white" opacity="0.05"/><circle cx="600" cy="50" r="40" fill="white" opacity="0.05"/></svg>');
-        }*/
+ 
 
         .cta-content {
             position: relative;
@@ -917,6 +938,16 @@
             .hero-content h1 {
                 font-size: 2rem;
             }
+			
+			.cta-button{
+			 display: none;
+			}
+			
+			.cta-button-movil{
+			 display: block;
+			}
+			
+
 
             .section {
                 padding: 3rem 0;
@@ -944,7 +975,7 @@
         <div class="nav-container">
             <a href="#inicio" class="logo">
                 <div class="logo-circle">
-                    <div class="logo-inner"><img src="img/logo-spa.jpg" alt="logo" class="logo"></div>
+                    <div class="logo-inner"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985122/logo_jc7zzn.png" alt="logo" class="logo"></div>
                 </div>
                <!-- <span class="logo-text">cirbestetica</span> -->
             </a>
@@ -986,18 +1017,51 @@
             </div>
             <div class="hero-image">
                
-                   <img src="img/hero-imgen.png" alt="imgen" style="border-radius: 25px;">
+                   <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985709/hero-imgen_oyb2ug.png" alt="imgen" style="border-radius: 25px; padding">
 				   
-				          <div class="floating-element top-right">
+			         <div class="floating-element top-right">
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 12px; height: 12px; background: #00d984; border-radius: 50%;"></div>
+                        <div style="width: 12px; height: 12px; background: yellow; border-radius: 50%;"></div>
                         <div>
-                            <div style="font-size: 0.9rem; font-weight: 600; color: #00d984;">100% Online</div>
-                            <div style="font-size: 0.8rem; color: #a1a1aa;">Disponible 24/7</div>
+                            <div style="font-size: 0.9rem; font-weight: 600;color:yellow;">Reserva tu Turno</div>
+                            <div style="font-size: 0.8rem;color:#ffffff;">Hablemos por whatsapp</div>
                         </div>
                     </div>
                 </div>
 
+                <div class="floating-element bottom-left">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="background: var(--gradient-primary); padding: 8px; border-radius: 8px;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="yellow">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+							  <svg width="28" height="28" viewBox="0 0 24 24" fill="yellow">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+							  <svg width="28" height="28" viewBox="0 0 24 24" fill="yellow">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+							  <svg width="28" height="28" viewBox="0 0 24 24" fill="yellow">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+							  <svg width="28" height="28" viewBox="0 0 24 24" fill="yellow">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.9rem; font-weight: 600; color:yellow;"> 5.0 Estrellas</div>
+                            <div style="font-size: 0.8rem; color: #a1a1aa; color:#ffffff;">Clientes satisfechos</div>
+                        </div>
+                    </div>
+					
+				
+                </div>
+                </div>
+   <div class="hero-buttons">
+                    <a href="#reserva" class="cta-button-movil">
+                        Reservar Turno <i class="fab fa-whatsapp"></i> 
+                    </a>
+                </div>
          
                     </div>
                 </div>
@@ -1013,20 +1077,25 @@
       <div class="socios-track">
         <!-- Logos originales -->
 	
-        <div class="socios-slide"><img src="img/marcas-spa/bodyup.webp" alt="html5"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/criofrecuencia.webp" alt="chatgpt"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/dermapen.webp" alt="manychat"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/himfu.webp" alt="tiendanube"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/velaslimplus.webp" alt="shopify"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/presoterapia.webp" alt="chatbot"></div>
-          
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985341/criolipolisis_g6jbi3.png" alt="html5"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985339/velaslimplus_trkm1g.webp" alt="chatgpt"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985337/presoterapia_qdtx1j.png" alt="manychat"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985337/mesoterapia_vaguao.png" alt="tiendanube"></div>
+		 <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985334/himfu_d69xdr.png" alt="chatbot"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985333/dermapen_gxd7xt.webp" alt="shopify"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985330/criofrecuencia_crhez1.png" alt="chatbot"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985328/bodyup_ctlbfa.webp" alt="chatbot"></div>  
 	  <!-- Logos duplicados para el loop -->
-       <div class="socios-slide"><img src="img/marcas-spa/bodyup.webp" alt="html5"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/criofrecuencia.webp" alt="chatgpt"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/dermapen.webp" alt="manychat"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/himfu.webp" alt="tiendanube"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/velaslimplus.webp" alt="shopify"></div>
-        <div class="socios-slide"><img src="img/marcas-spa/presoterapia.webp" alt="chatbot"></div>
+ <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985341/criolipolisis_g6jbi3.png" alt="html5"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985339/velaslimplus_trkm1g.webp" alt="chatgpt"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985337/presoterapia_qdtx1j.png" alt="manychat"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985337/mesoterapia_vaguao.png" alt="tiendanube"></div>
+		 <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985334/himfu_d69xdr.png" alt="chatbot"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985333/dermapen_gxd7xt.webp" alt="shopify"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985330/criofrecuencia_crhez1.png" alt="chatbot"></div>
+        <div class="socios-slide"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985328/bodyup_ctlbfa.webp" alt="chatbot"></div>  
+	  <!-- Logos duplicados para el loop -->
+          
           
       </div>
     </div>
@@ -1069,7 +1138,7 @@
                 </div>
                 <div class="about-image fade-in">
                   
-                        <img src="img/nosotros.png" alt="nosotros" style="border-radius: 24px;">
+                        <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985281/nosotros_fvmyls.webp" alt="nosotros" style="border-radius: 24px;">
                   
                 </div>
             </div>
@@ -1140,7 +1209,7 @@
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-before-after"></i>
+                       <img src="img/iconos/piel.png" alt="piel" style="height:48px; weight:48px;">
                     </div>
                     <h3>Antes y Después</h3>
                     <p>Transformaciones increíbles con nuestros tratamientos faciales, mostrando resultados visibles y duraderos.</p>
@@ -1172,12 +1241,12 @@
         <div class="container">
       
             <div class="gallery-grid">
-                <div class="gallery-item fade-in"><img src="img\galeria-spa\spa1.png"></div>
-                <div class="gallery-item fade-in" /*style="background: linear-gradient(135deg, #87CEEB, #E8B4D6);"*/><img src="img\galeria-spa\spa2.png"></div>
-                <div class="gallery-item fade-in" /*style="background: linear-gradient(135deg, #F8E8F2, #87CEEB);"*/><img src="img\galeria-spa\spa3.png"></div>
-                <div class="gallery-item fade-in" /*style="background: linear-gradient(135deg, #E8B4D6, #87CEEB);"*/><img src="img\galeria-spa\spa4.png"></div>
-                <div class="gallery-item fade-in" /*style="background: linear-gradient(135deg, #87CEEB, #F8E8F2);"*/><img src="img\galeria-spa\spa5.png"></div>
-                <div class="gallery-item fade-in" /*style="background: linear-gradient(135deg, #F8E8F2, #E8B4D6);"*/><img src="img\galeria-spa\spa6.png"></div>
+                <div class="gallery-item fade-in"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985147/spa1_fsjzfw.webp"></div>
+                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985150/spa6_ul6ny2.webp"></div>
+                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa3_keb1kq.webp"></div>
+                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985143/spa4_dhnbqv.webp"></div>
+                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa2_hachk8.webp"></div>
+                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985141/spa5_nfskuh.webp"></div>
            
             </div>
         </div>
@@ -1192,6 +1261,7 @@
             </div>
             <div class="testimonials-container">
                 <div class="testimonial fade-in">
+				<img src="https://i.pravatar.cc/100?img=24" alt="Testimonio 1">
                     <p class="testimonial-text">"Excelente atención y profesionalismo. Los tratamientos faciales transformaron mi piel completamente. El ambiente es súper relajante y los resultados son increíbles."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">M</div>
@@ -1202,6 +1272,7 @@
                     </div>
                 </div>
                 <div class="testimonial fade-in">
+				<img src="https://i.pravatar.cc/100?img=45" alt="Testimonio 2">
                     <p class="testimonial-text">"Me encanta venir a CIRB Estética. Siempre salgo renovada y feliz con los resultados. La atención es personalizada y muy profesional."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">L</div>
@@ -1212,6 +1283,7 @@
                     </div>
                 </div>
                 <div class="testimonial fade-in">
+					<img src="https://i.pravatar.cc/100?img=41" alt="Testimonio 3">
                     <p class="testimonial-text">"Los peelings faciales son increíbles. Mi piel nunca se vio tan luminosa y saludable. Recomiendo 100% este lugar."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
@@ -1222,6 +1294,7 @@
                     </div>
                 </div>
 				     <div class="testimonial fade-in">
+					 				<img src="https://i.pravatar.cc/100?img=28" alt="Testimonio 4">
                     <p class="testimonial-text">"Excelente atención y profesionalismo. Los tratamientos faciales transformaron mi piel completamente. El ambiente es súper relajante y los resultados son increíbles."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">M</div>
@@ -1232,6 +1305,7 @@
                     </div>
                 </div>
                 <div class="testimonial fade-in">
+								<img src="https://i.pravatar.cc/100?img=29" alt="Testimonio 5">
                     <p class="testimonial-text">"Me encanta venir a CIRB Estética. Siempre salgo renovada y feliz con los resultados. La atención es personalizada y muy profesional."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">L</div>
@@ -1242,6 +1316,7 @@
                     </div>
                 </div>
                 <div class="testimonial fade-in">
+								<img src="https://i.pravatar.cc/100?img=38" alt="Testimonio 6">
                     <p class="testimonial-text">"Los peelings faciales son increíbles. Mi piel nunca se vio tan luminosa y saludable. Recomiendo 100% este lugar."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
@@ -1316,11 +1391,17 @@
     <section id="reserva" class="section cta-section">
         <div class="container">
             <div class="cta-content">
+			     <a href="#inicio" class="logo-calltoaction">
+               
+                    <div class="logo-inner"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985122/logo_jc7zzn.png" alt="logo" class="logo"></div>
+           
+               <!-- <span class="logo-text">cirbestetica</span> -->
+            </a>
                 <h2>¿Lista para transformar tu piel?</h2>
-                <p>Reserva tu turno ahora y descubre la diferencia de un tratamiento profesional en Villa Ballester</p>
+                <p>Resrva tu turno ahora y descubre la diferencia de un tratamiento profesional en Villa Ballester</p>
+				
                 <a href="https://wa.link/vm87hw" class="whatsapp-button" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    Reservar por WhatsApp
+                  Reservar por WhatsApp  <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
         </div>
@@ -1331,6 +1412,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+				     <a href="#inicio" class="logo">
+                <div class="logo-circle">
+                    <div class="logo-inner"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985122/logo_jc7zzn.png" alt="logo" class="logo"></div>
+                </div>
+               <!-- <span class="logo-text">cirbestetica</span> -->
+            </a>
                     <h3>CIRB Estética</h3>
                     <p>Tu centro de confianza para tratamientos de belleza y bienestar en Villa Ballester, Buenos Aires.</p>
                     <div class="social-links">
