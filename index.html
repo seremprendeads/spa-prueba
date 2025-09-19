@@ -583,18 +583,19 @@
             margin-bottom: 1rem;
             position: relative;
         }
+.section-title-galeria h2::after,
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-pink);
+    border-radius: 2px;
+}
 
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--primary-pink);
-            border-radius: 2px;
-        }
 
         .section-title p {
             font-size: 1.2rem;
