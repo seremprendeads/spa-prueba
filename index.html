@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -302,7 +303,13 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 4rem 2rem;
+        }
+		
+		  .container-gallery-animada {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 0;
         }
 
         .section-title {
@@ -347,6 +354,10 @@
             color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
+        }
+		
+        p {
+            font-size: 1.2rem;
         }
 
         /* Socios Slider */
@@ -558,6 +569,26 @@
             transform: scale(1.05);
             box-shadow: 0 15px 35px rgba(232, 180, 214, 0.3);
         }
+		
+		
+		/* Galeria Animada*/
+		.gallery-animada{
+		  display: flex;
+		  height: 430px;
+		}
+		.gallery-animada img{
+		  width: 0px;
+		  flex-grow: 1;
+		  object-fit: cover;
+		  opacity: .8;
+		  transition: .5s ease;
+		}
+		.gallery-animada img:hover{
+		  cursor: crosshair;
+		  width: 300px;
+		  opacity: 1;
+		  filter: contrast(120%);
+		}
 
         /* Testimonials */
         .testimonials-container {
@@ -1478,7 +1509,7 @@
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                       <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758073799/piel_xtgjcs.png" alt="piel" style="height:48px; weight:48px;">
+                       <img src="img/iconos/piel.png" alt="piel" style="height:48px; weight:48px;">
                     </div>
                     <h3>Antes y Después</h3>
                     <p>Transformaciones increíbles con nuestros tratamientos faciales, mostrando resultados visibles y duraderos.</p>
@@ -1516,6 +1547,29 @@
                 <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985143/spa4_dhnbqv.webp"></div>
                 <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa2_hachk8.webp"></div>
                 <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985141/spa5_nfskuh.webp"></div>
+           
+            </div>
+        </div>
+    </section>
+	
+	
+    <!-- Gallery Animada -->
+    <section id="galeria">
+        <div class="container-gallery-animada">
+      
+            <div class="gallery-animada">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298389/2_pkdofh.jpg" alt="1">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/5_mhlhmz.jpg" alt="2">
+	         	<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/3_jthlww.jpg" alt="3">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/4_ypzbuf.jpg" alt="4">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/7_isw4fk.jpg" alt="5">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/6_ngqjhe.jpg" alt="6">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/8_jqbuup.jpg" alt="7">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/1_o6nabb.jpg" alt="8">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298391/11_csolmk.jpg" alt="9">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/10_iaohja.jpg" alt="10">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298390/9_j5p74z.jpg" alt="11">
+				<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758298391/12_goccmk.jpg" alt="12">
            
             </div>
         </div>
@@ -1662,7 +1716,7 @@
             <div class="cta-content">
 			     <a href="#inicio" class="logo-calltoaction">
                
-                    <div class="logo-inner"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985122/logo_jc7zzn.png" alt="logo" class="logo-hero "></div>
+                    <div class="logo-inner"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985122/logo_jc7zzn.png" alt="logo" class="logo-hero"></div>
            
                <!-- <span class="logo-text">cirbestetica</span> -->
             </a>
@@ -1710,7 +1764,7 @@
                     <h3>Contacto</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Villa Ballester, Buenos Aires, Argentina</p>
                     <p><i class="fas fa-phone"></i> Reservas por WhatsApp</p>
-                    <p> @cirbestetica.ok</p>
+                    <p><i class="fas fa-instagram"></i> @cirbestetica.ok</p>
                     <p><i class="fas fa-clock"></i> Info y Turnos disponibles</p>
                 </div>
                 <div class="footer-section">
@@ -1841,7 +1895,4 @@
     </script>
 </body>
 </html>
-
-
-
 
