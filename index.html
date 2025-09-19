@@ -306,6 +306,12 @@
             padding: 4rem 2rem;
         }
 		
+		  .container-gallery-animada {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
@@ -350,9 +356,7 @@
             margin: 0 auto;
         }
 		
-        p {
-            font-size: 1.2rem;
-        }
+
 
         /* Socios Slider */
         .socios-slider {
@@ -566,24 +570,54 @@
 		
 		
 		/* Galeria Animada*/
+		
+		/* Galeria Animada*/
 		.gallery-animada{
 		  display: flex;
 		  height: 430px;
+		  overflow: hidden;
 		}
 		.gallery-animada img{
 		  width: 0px;
 		  flex-grow: 1;
 		  object-fit: cover;
 		  opacity: .8;
-		  transition: .5s ease;
+		  transition: .8s ease;
+		  cursor: pointer;
 		}
-		.gallery-animada img:hover{
-		  cursor: crosshair;
-		  width: 300px;
-		  opacity: 1;
-		  filter: contrast(120%);
-		}
+		
+		/* Animación automática secuencial */
+		/* Galeria Animada*/
+.gallery-animada{
+  display: flex;
+  height: 430px;
+  overflow: hidden;
+}
+.gallery-animada img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .8s ease;
+  cursor: pointer;
+}
 
+/* Animación automática secuencial */
+.gallery-animada img.active {
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+  box-shadow: 0 10px 30px rgba(232, 180, 214, 0.4);
+  z-index: 2;
+}
+
+.gallery-animada img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+  box-shadow: 0 10px 30px rgba(232, 180, 214, 0.4);
+}
         /* Testimonials */
         .testimonials-container {
             display: grid;
@@ -1886,8 +1920,57 @@
         window.addEventListener('load', () => {
             document.body.classList.add('loaded');
         });
+		
+		// Gallery Animada - Autoplay Animation
+const galleryImages = document.querySelectorAll('.gallery-animada img');
+let currentIndex = 0;
+let galleryInterval;
+
+function startGalleryAutoplay() {
+    galleryInterval = setInterval(() => {
+        // Remover clase active de todas las imágenes
+        galleryImages.forEach(img => img.classList.remove('active'));
+        
+        // Agregar clase active a la imagen actual
+        galleryImages[currentIndex].classList.add('active');
+        
+        // Avanzar al siguiente índice
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+    }, 2500); // Cambia cada 2.5 segundos
+}
+
+function stopGalleryAutoplay() {
+    clearInterval(galleryInterval);
+}
+
+// Iniciar autoplay cuando la galería sea visible
+const galleryAnimada = document.querySelector('.gallery-animada');
+if (galleryAnimada) {
+    const galleryObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startGalleryAutoplay();
+            } else {
+                stopGalleryAutoplay();
+                // Limpiar todas las clases active cuando no esté visible
+                galleryImages.forEach(img => img.classList.remove('active'));
+                currentIndex = 0;
+            }
+        });
+    }, { threshold: 0.3 });
+
+    galleryObserver.observe(galleryAnimada);
+
+    // Pausar autoplay al hacer hover y reanudar al salir
+    galleryAnimada.addEventListener('mouseenter', stopGalleryAutoplay);
+    galleryAnimada.addEventListener('mouseleave', () => {
+        if (galleryAnimada.getBoundingClientRect().top < window.innerHeight && 
+            galleryAnimada.getBoundingClientRect().bottom > 0) {
+            startGalleryAutoplay();
+        }
+    });
+}
     </script>
 </body>
 </html>
-
 
