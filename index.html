@@ -482,7 +482,7 @@
             border-radius: 30px;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgb(180 51 132 / 34%);
+            box-shadow: 0 10px 30px #96999e;
             white-space: nowrap;
             overflow: hidden;
             z-index: 1;
@@ -492,24 +492,24 @@
         .cta-button-hambuerguesa::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
+            top: -200px;
+            left: -200px;
+            right: -200px;
+            bottom: -200px;
             background: conic-gradient(#b43384, #e8b4d6, #b43384, #e8b4d6, #b43384);
             border-radius: 32px;
             z-index: -1;
-            animation: borderRotate 3s linear infinite;
+            animation: borderRotate 9s linear infinite;
         }
 
         /* Fondo interno del botón hamburguesa */
         .cta-button-hambuerguesa::after {
             content: '';
             position: absolute;
-            top: 2px;
-            left: 2px;
-            right: 2px;
-            bottom: 2px;
+            top: 200px;
+            left: 200px;
+            right: 200px;
+            bottom: 200px;
             background: var(--gradient-logo);
             border-radius: 28px;
             z-index: -1;
@@ -1610,7 +1610,7 @@
                 <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
 				        <div class="hero-buttons">
-                    <a href="#reserva" class="cta-button-hambuerguesa">
+                    <a href="#reserva" class="cta-button-hambuerguesa nav-link">
                         Reservar Turno <i class="fab fa-whatsapp"></i> 
                     </a>
                 </div>
@@ -1825,12 +1825,12 @@
     </section>
 
     <!-- Works/Portfolio Section -->
-    <section id="trabajos" class="section about">
-        <div class="container">
-            <div class="section-title fade-in">
+	        <div class="section-title fade-in">
                 <h2>Nuestros Trabajos</h2>
                 <p>Resultados reales que hablan por sí solos</p>
             </div>
+    <section id="trabajos" class="section hero-fondo">
+        <div class="container">
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -1901,13 +1901,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonios" class="section">
-        <div class="container">
-            <div class="section-title fade-in">
+		    <div class="section-title fade-in">
                 <h2>Testimonios</h2>
                 <p>Lo que dicen nuestras clientas de Villa Ballester</p>
             </div>
-            <div class="testimonials-container">
+    <section id="testimonios" class="section hero-fondo">
+        <div class="container">
+             <div class="testimonials-container">
                 <div class="testimonial fade-in">
 				<img src="https://i.pravatar.cc/100?img=24" alt="Testimonio 1">
                     <p class="testimonial-text">"Excelente atención y profesionalismo. Los tratamientos faciales transformaron mi piel completamente. El ambiente es súper relajante y los resultados son increíbles."</p>
