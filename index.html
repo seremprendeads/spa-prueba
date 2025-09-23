@@ -240,32 +240,59 @@
         }
 
         /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 150px 0 100px;
-        }
 
-        .hero-fondo {
-            background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1758556911/spa-hero2_rp39fz.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            padding: 100px 0 100px;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 100px;
+    position: relative; /* IMPORTANTE: Agregar esta línea */
+    overflow: hidden;   /* IMPORTANTE: Agregar esta línea */
+}
+.hero-fondo {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 100px;
+    /* Eliminar TODAS las propiedades background-image, background-size, etc. */
+}
 
- 
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+/* Video de fondo - CUBRE TODO EL HERO */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que cubra todo sin distorsionar */
+    object-position: center center; /* Centrado perfecto */
+    z-index: -2;
+}
+
+/* Overlay para mejorar legibilidad del texto */
+.hero-fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Un poco más oscuro para mejor legibilidad */
+    z-index: -1;
+}
+
+/* Asegurar que el contenido esté por encima */
+.hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
 
         .hero-content h1 {
             font-size: 3.5rem;
@@ -532,6 +559,16 @@
         }
 
         /* Sections */
+		
+		   .section-fondo {
+            background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1758556911/spa-hero2_rp39fz.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            padding: 100px 0 100px;
+        }
+
         .section {
             padding: 5rem 0;
         }
@@ -1958,7 +1995,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero hero-fondo">
+    <section id="inicio" class="hero">
+	
+	   <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://res.cloudinary.com/dliredzt9/video/upload/v1758663129/video-hero_n4kxor.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
         <div class="hero-container">
             <div class="hero-content">
 			    <div class="logo-circle">
@@ -2163,7 +2205,7 @@
                 <h2>Nuestros Trabajos</h2>
                 <p>Resultados reales que hablan por sí solos</p>
             </div>
-    <section id="trabajos" class="section hero-fondo">
+    <section id="trabajos" class="section section-fondo">
         <div class="container">
             <div class="services-grid">
                 <div class="service-card fade-in">
@@ -2200,18 +2242,31 @@
         <div class="container">
       
             <div class="gallery-grid">
-                <div class="gallery-item fade-in"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985147/spa1_fsjzfw.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985150/spa6_ul6ny2.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa3_keb1kq.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985143/spa4_dhnbqv.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa2_hachk8.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985141/spa5_nfskuh.webp"></div>
-             <div class="gallery-item fade-in"><img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985147/spa1_fsjzfw.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985150/spa6_ul6ny2.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa3_keb1kq.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985143/spa4_dhnbqv.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa2_hachk8.webp"></div>
-                <div class="gallery-item fade-in"> <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985141/spa5_nfskuh.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663112/spa3_qlvw5q.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663111/spa1_d3aduw.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663109/spa13_hgajhm.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663108/spa14_zuoj7r.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663106/spa11_kvylff.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663105/spa9_ala82v.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663104/spa12_mwhva3.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663103/spa10_d8uiuv.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa3_keb1kq.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1758663101/spa6_mszmg9.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985142/spa2_hachk8.webp"></div>
+<div class="gallery-item fade-in">
+<img src="https://res.cloudinary.com/dliredzt9/image/upload/v1757985141/spa5_nfskuh.webp"></div>
+         
             </div>
         </div>
     </section>
@@ -2244,7 +2299,7 @@
                 <h2>Testimonios</h2>
                 <p>Lo que dicen nuestras clientas de Villa Ballester</p>
             </div>
-    <section id="testimonios" class="section hero-fondo">
+    <section id="testimonios" class="section section-fondo">
         <div class="container">
              <div class="testimonials-container">
                 <div class="testimonial fade-in">
