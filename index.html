@@ -569,6 +569,103 @@
             padding: 100px 0 100px;
         }
 
+				
+		/* Banner Peptonas Section - Simple */
+.peptonas-banner {
+    background-image: url('https://res.cloudinary.com/dliredzt9/image/upload/v1757985253/spa-hero_hyc6r9.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.peptonas-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255 255 255 / 60%);
+    z-index: 1;
+}
+
+.peptonas-banner .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.banner-text {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0;
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+ 
+}
+/* Responsive Styles */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .peptonas-banner {
+        background-attachment: scroll;
+        padding: 60px 0;
+    }
+    
+   
+    .banner-text {
+        font-size: 1.8rem;
+        Padding: 0 20px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .peptonas-banner {
+        background-attachment: scroll;
+        padding: 50px 0;
+    }
+    
+    .banner-text {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Móviles grandes (430px) */
+@media (max-width: 430px) {
+    .peptonas-banner {
+        padding: 50px 0;
+    }
+    
+    .banner-text {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Móviles extra pequeños (320px) */
+@media (max-width: 320px) {
+    .peptonas-banner {
+        padding: 40px 0;
+    }
+    
+    .banner-text {
+        font-size: 1.6rem;
+        padding: 0 0.5rem;
+    }
+}
+
         .section {
             padding: 5rem 0;
         }
@@ -2158,45 +2255,32 @@
                     <div class="service-icon">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Peeling Facial</h3>
-                    <p>Renovación celular para eliminar imperfecciones y promover una piel radiante y saludable.</p>
+                    <h3>Tratamientos corporales</h3>
+                    <p>Masajes, exfoliaciones y tratamientos reductores, anticeluliticos y reafirmantes para el cuidado integral de tu piel.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-tint"></i>
                     </div>
-                    <h3>Limpieza Facial</h3>
-                    <p>Tratamiento profundo de limpieza para purificar y oxigenar tu piel, eliminando toxinas e impurezas.</p>
+                    <h3>Mesoterapia facial y Corporal</h3>
+                    <p>técnica estética contra la celulitis y flacidez de la piel. Rejuvenecimiento y glow up facial.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-magic"></i>
                     </div>
-                    <h3>Dermapen</h3>
-                    <p>Técnica de microagujas para estimular la producción de colágeno y mejorar la textura de la piel.</p>
+                    <h3>Tratamiento corporal</h3>
+                    <p>Ayuda a ganar masa muscular, volumen. Son proteínas que llegan al ADN de las células musculares, actúan como nutriente natural y orgánico sin causar riesgos ni efectos secundarios.</p>
                 </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Tratamientos Corporales</h3>
-                    <p>Masajes, exfoliaciones y tratamientos reductores para el cuidado integral de tu cuerpo.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-sparkles"></i>
-                    </div>
-                    <h3>Cuidado de Manos y Pies</h3>
-                    <p>Manicura y pedicura profesional con productos de alta calidad para uñas perfectas.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Tratamientos Especiales</h3>
-                    <p>Promociones mensuales y tratamientos de temporada adaptados a las necesidades de cada época.</p>
-                </div>
+              
             </div>
+        </div>
+    </section>
+
+	  <!-- Banner Peptonas Section -->
+    <section class="peptonas-banner">
+        <div class="banner-content">
+            <h2 class="banner-text">PETONAS de Músculo para Glúteos</h2>
         </div>
     </section>
 
@@ -2680,6 +2764,7 @@ if (galleryAnimada) {
     </script>
 </body>
 </html>
+
 
 
 
