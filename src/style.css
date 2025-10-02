@@ -138,4 +138,36 @@
 @keyframes borderRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+
+}
+
+/* 📱 Ajustes de tipografía para móviles */
+@layer base {
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl; /* antes 3xl → subimos a 4xl */
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl; /* antes 2xl → subimos a 3xl */
+  }
+  h3 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  h4 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+  h5 {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  h6 {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  p, span, li, a {
+    @apply text-lg sm:text-xl md:text-2xl; /* antes text-base → subimos */
+  }
+  strong, b {
+    @apply text-lg font-bold sm:text-xl;
+  }
+  small {
+    @apply text-base sm:text-lg; /* que no quede demasiado chico en mobile */
+  }
 }
