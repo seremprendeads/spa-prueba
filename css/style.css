@@ -2048,4 +2048,9 @@
         }
 
         /* === TABLETS Y PANTALLAS MEDIANAS (768px - 1024px) === */
-        @media (min-width: 431px) and (max-width: 1024px) {
+
+        @media (min-width: 431px) and (max-width: 1024px) { 
+			.footer-content {
+				 font-size: smaller;
+						}
+		}
