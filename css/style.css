@@ -996,6 +996,7 @@
             margin-bottom: 1.5rem;
             color: var(--text-light);
             line-height: 1.6;
+			  font-size: medium;
         }
 
         .testimonial-author {
@@ -2048,9 +2049,14 @@
         }
 
         /* === TABLETS Y PANTALLAS MEDIANAS (768px - 1024px) === */
-
-        @media (min-width: 431px) and (max-width: 1024px) { 
+        @media (min-width: 431px) and (max-width: 1024px) {
 			.footer-content {
 				 font-size: smaller;
 						}
+						.footer-bottom {
+      font-size: small;
+}
+   .testimonial-text {
+    font-size: small;
+}
 		}
